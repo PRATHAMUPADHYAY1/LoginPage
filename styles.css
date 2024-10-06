@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{  zoom:99%;
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Merriweather Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    
+    background: url("logo.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110vh;
+    
+}
+.nav{
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content : space-between;
+    width: 100vw;
+    height: 100px;
+    padding: 2rem 10rem;
+    /* line-height: 120px ; */
+    z-index: 10;
+}
+.nav-logo p{
+    color: rgb(25, 16, 128);
+    font-size: 50px;
+    font-weight: 600;
+    font-family: 'Tilt Neon', sans-serif;
+    animation:rotateAndColor 4s linear infinite, pulse 2s infinite;
+   
+    
+}
+@keyframes rotateAndColor {
+            0% {
+                transform: rotate(0deg);
+                color: #b22405;
+            }
+            25% {
+                transform: rotate(90deg);
+                color: #085d17;
+            }
+            50% {
+                transform: rotate(180deg);
+                color: #5733FF;
+            }
+            75% {
+                transform: rotate(270deg);
+                color: #6e085f;
+            }
+            100% {
+                transform: rotate(360deg);
+                color: #3e1ec9;
+            }
+        }
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.nav-button{
+    /* margin-left: 950px; */
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    
+}
+.nav-button .btn{
+    width: 180px;
+    height: 50px;
+    font-weight: 500;
+    border: 3px solid;
+    border-color: rgb(168, 101, 0);
+    border-radius: 30px;
+    cursor:pointer;
+    background-color: rgba(255, 206, 57, 0.599);
+    color:rgb(0, 0, 0);
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+
+#registerBtn{
+    margin-left: 15px;
+}
+#loginBtn:hover{
+    
+    background-color:  rgba(255, 206, 57);
+    width:220px;
+}
+#registerBtn:hover{
+    background-color: rgba(255, 206, 57) ;
+    width:220px;
+}
+.content
+{   
+    color: rgb(0, 0, 0);
+    position: relative;
+     padding-bottom: 100px;
+    gap: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.textbox{
+    position: relative;
+   max-width: 800px;
+  
+   
+}
+.textbox h1{
+    font-size: 6em;
+    font-weight: 300;
+    line-height: 1.4em;
+    
+
+}
+.textbox h1 span{
+    font-size: 1.8em;
+    font-weight: 900;
+    color: rgb(0, 33, 152);
+    padding-bottom: 20px;
+  
+
+
+}
+.textbox p{
+    font-size: 25px;
+    font-weight: lighter; 
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+}
+.form-box{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    width: 512px;
+    height: 600px;
+   /* background:rgba(00,0,0,04); */
+    /* z-index: 2; */
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 30px;
+    padding: 2rem;
+}
+.login-container{
+    scale: 0.9;
+    position: absolute;
+    /* left:4px; */
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.107);
+    backdrop-filter: blur(5px);
+    border-radius: 1rem;
+     transition:all .5s      ease-in-out;
+     gap: 1rem;
+     padding: 2rem;
+}
+.register-container{
+    scale: 0.9;
+    position: absolute;
+    left:562px;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.19);
+    backdrop-filter: blur(5px);
+    border-radius: 1rem;
+     transition:all .5s  ease-in-out;
+}
+.top{font-size: 15px;
+    text-align: center;
+}
+.top span{
+    color: rgb(0, 0, 0);
+   padding: 10px 0;
+    font-size:20px;
+   
+}
+.top span a{
+    font-weight:500;
+    color: rgb(0, 76, 9);
+    margin-left: 5px;
+}
+header{
+    color: rgba(22, 0, 150, 0.779);
+    font-size: 30px;
+    text-align: center;
+    padding:10px 0 30px 0;
+
+}
+.two-forms{
+    display: flex;
+    gap:10px;
+}
+.input-field{
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.19);
+    color: black;
+    height:60px ;
+    width: 100%;
+    padding:0 10px 0 45px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    transition: 0.2 ease;
+}
+.input-field::placeholder{
+    position: absolute;
+    color: #000;
+
+}
+.input-field:hover,.input-field:focus{
+    background: hsla(0, 0%, 0%, 0.271);
+}
+.input-box i{
+    position: relative;
+    top: -35px;
+    left: 17px;
+    color: rgb(255, 255, 255);
+}
+
+.submit{
+    font-size: 15px;
+    font-weight:500 ;
+    color: rgb(0, 0, 0);
+    height: 45px;
+    border:none;
+    border-radius: 30px;
+    outline: none;
+    width:50%;
+    margin: auto;
+    background-color: rgba(255, 206, 57, 0.599);
+    cursor:pointer;
+    transition: 0.3s ease-in-out;
+   
+    border: 3px solid;
+    border-color: rgb(168, 101, 0);
+}
+.submit:hover{
+    width:100%;
+    background-color: rgba(255, 206, 57) ;
+    
+}
+.one{
+    display: flex;
+    gap: 5px;
+}
+.tag{
+    scale: 0.8;
+    width:80%;
+}
+@media screen and (max-width:1020px) {
+    .nav{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        height: 6rem;
+        z-index: 10;
+    }
+    .nav-logo p{
+        font-size: 3rem;
+    }
+    .nav-button{
+        display: none;
+    }
+    .textbox{
+        display: none;
+    }
+    .content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        padding: 0;
+    }
+    .form-box{
+        padding: 0;
+    }
+    
+}
+@media screen and (min-width:1020px) and (max-width:1480px){
+.textbox h1{
+    font-size: 4rem;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 5rem;
+}
+.form-box{
+    padding: 0;
+}
+
+}

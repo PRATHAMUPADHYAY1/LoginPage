@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentics</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="nav">
+      <div class="nav-logo">
+        <p>Sentics</p>
+      </div>
+
+      <div class="nav-button">
+        <button class="btn white-btn" id="loginBtn" onclick="login()">Sign in</button>
+
+
+        <button class="btn" id="registerBtn" onclick="register()">Sign up</button>
+      </div>
+     
+    </nav>
+    <div class="content">
+      <div class="textbox">
+        <div class=" tag">
+          <h1>Turning <span>voice </span> <br>into insights</bnr>
+          </h1>
+        </div>
+       
+      </div>
+      <div class="form-box">
+
+        <div class="login-container" id="login">
+          <div class="top">
+            <span>dont have an account?<a href="#" onclick="register()">SignUp</a></span>
+            <header>login</header>
+          </div>
+
+          <div class="input-box">
+            <input type="text" class="input-field" placeholder="Username or Email">
+            <i class="bx bx-user"></i>
+          </div>
+          <div class="input-box">
+            <input type="password" class="input-field" placeholder="Password">
+            <i class="bx bx-lock-alt"></i>
+          </div>
+          <div class="input-box">
+            <input type="submit" class="submit" value="Sign In">
+
+          </div>
+
+
+
+        </div>
+
+
+
+
+
+
+        <div class="register-container" id="register">
+          <div class="top">
+            <span>Have an account?<a href="#" onclick="login()">login</a></span>
+            <header>SignUp</header>
+          </div>
+          <div class="two-forms">
+            <div class="input-box">
+              <input type="text" class="input-field" placeholder="Firstname">
+              <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+              <input type="text" class="input-field" placeholder="Lastname">
+              <i class="bx bx-user"></i>
+            </div>
+          </div>
+          <div class="input-box">
+            <input type="text" class="input-field" placeholder="Email">
+            <i class="bx bx-envelope"></i>
+          </div>
+          <div class="input-box">
+            <input type="password" class="input-field" placeholder="Password">
+            <i class="bx bx-lock-alt"></i>
+          </div>
+          <div class="input-box">
+            <input type="submit" class="submit" value="register">
+
+          </div>
+
+          <div class="one">
+            <input type="checkbox" id="register-check">
+            <label for="register-check">be sure to remember password</label>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <script>
+      var a = document.getElementById("loginBtn");
+      var b = document.getElementById("registerBtn");
+      var x = document.getElementById("login");
+      var y = document.getElementById("register");
+      function login() {
+        x.style.left = 0;
+        y.style.left = "560px";
+        a.className += " white-btn";
+        b.className = "btn";
+        // x.style.opacity = 1;
+        // y.style.opacity = 0;
+      }
+      function register() {
+        x.style.left = "-560px";
+        y.style.left = 0;
+        b.className += " white-btn";
+        a.className = "btn";
+        // x.style.opacity = 0;
+        // y.style.opacity = 1;
+      }
+    </script>
+</body>
+
+</html>
